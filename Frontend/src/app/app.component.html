@@ -1,4 +1,4 @@
-<nz-layout class="layout">
+<nz-layout >
   <nz-header>
     <div class="logo"></div>
     <ul nz-menu [nzTheme]="'dark'" [nzMode]="'horizontal'" style="line-height: 64px;">
@@ -7,10 +7,9 @@
       <li nz-menu-item routerLink="/get">Get Playlist</li>
     </ul>
   </nz-header>
-  <nz-layout>
-    <nz-content style="padding:50px 50px;">
+    <nz-content style="padding:50px 50px; margin-bottom: 200px">
       <router-outlet></router-outlet>
     </nz-content>
-  </nz-layout>
-  <nz-footer style="text-align: center;">PLaylist W Friends ©2018</nz-footer>
+  <nz-footer style="text-align:center">PLaylist W Friends ©2018</nz-footer>
+  
 </nz-layout>
