@@ -5,3 +5,8 @@
     margin: 16px 24px 16px 0;
     float: left;
   }
+
+  .foot{
+    height: 30px;
+    margin-bottom: 0px !important;
+  }
