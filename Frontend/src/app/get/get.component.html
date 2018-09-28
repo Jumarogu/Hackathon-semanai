@@ -10,7 +10,7 @@
                 style="width: 300px; height: 50px; margin-right:30%; margin-left:30%;"
                 nz-input placeholder="Playlist Name" 
                 nzSize="large"
-                [(ngModel)]="name">
+                [(ngModel)]="this.playlist_info.name">
         </div>
         
     </div>
@@ -22,14 +22,14 @@
                     style="width: 300px; height: 50px; margin-right:30%; margin-left:30%;"
                     nz-input placeholder="Playlist Code" 
                     nzSize="large"
-                    [(ngModel)]="code">
+                    [(ngModel)]="this.playlist_info.playlistCode">
             </div>
             
         </div>
     </div> 
 <div nz-row nzXs='24' nzSm='24' nzMd='24' nzLg='24' nzXl='24' style="background: #ffffff">
     <div nz-col style="text-align: center; padding-bottom: 3%;" nzXs='24' nzSm='24' nzMd='24' nzLg='24' nzXl='24'>
-        <button class="boton"
+        <button (click)="this.reditect()" class="boton"
             style="width: 300px; height: 50px; margin-right:30%; margin-left:30%;"
             nz-button [nzSize]="size" nzType="primary">
                 Add Playlist to Spotify

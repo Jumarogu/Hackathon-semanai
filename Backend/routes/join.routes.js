@@ -31,7 +31,7 @@ exports.joinPlaylist = (req, res) => {
         client.close();
 
         spotifyApi.getMe()
-        .then(function(data) {
+        .then((data) => {
 
             user_info.id = data.body.id;
             user_info.display_name = data.body.display_name;
@@ -54,7 +54,7 @@ exports.joinPlaylist = (req, res) => {
                     res.status(200).json(playlis_info);
                 });
                 client.close();
-            }) 
+            })
         })
         .catch((err) => {
             console.log(err);

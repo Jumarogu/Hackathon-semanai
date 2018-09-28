@@ -6,6 +6,7 @@ import { GetComponent } from './get/get.component';
 import { ShowCodeComponent } from './show-code/show-code.component';
 import {ErrorComponent} from './error/error.component';
 import { JoinSuccessComponent } from './join-success/join-success.component';
+import { SaveSuccessComponent } from './save-success/save-success.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/create', pathMatch: 'full' },
@@ -14,7 +15,9 @@ const routes: Routes = [
   { path: 'get', component: GetComponent},
   { path: 'show-code', component: ShowCodeComponent},
   { path: 'error', component: ErrorComponent },
-  { path: 'join-success', component: JoinSuccessComponent }
+  { path: 'join-success', component: JoinSuccessComponent },
+  { path: 'save-success', component: SaveSuccessComponent }
+
 ];
 
 @NgModule({

@@ -18,6 +18,7 @@ import { ShowCodeComponent } from './show-code/show-code.component';
 import { ErrorComponent } from './error/error.component';
 import { JoinSuccessComponent } from './join-success/join-success.component';
 import { CookieService } from 'ngx-cookie-service';
+import { SaveSuccessComponent } from './save-success/save-success.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { CookieService } from 'ngx-cookie-service';
     JoinComponent,
     ShowCodeComponent,
     ErrorComponent,
-    JoinSuccessComponent
+    JoinSuccessComponent,
+    SaveSuccessComponent
   ],
   imports: [
     BrowserModule,

@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
 import {DataService } from '../services/data.service'
 
 @Component({
@@ -13,23 +12,19 @@ export class CreateComponent implements OnInit {
   private scope = 'user-top-read';
 
   constructor(private dataService: DataService) {
-    
    }
 
   ngOnInit() {
-
   }
 
   redirect() {
-    console.log('hiii');
-    
+        
     var params = {
       client_id: this.client_id,
       redirect_uri: 'http://localhost:4200/show-code',
       scope: this.scope || '',
       response_type: 'token'
     };
-    var authCompleted = false;
     var authUrl = 'https://accounts.spotify.com/authorize?' + this.toQueryString(params);
     window.location.href = authUrl;
   }
