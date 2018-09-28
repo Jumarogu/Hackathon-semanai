@@ -1,0 +1,28 @@
+.join{
+    font-size: 90px;
+    color: #39bfa3;
+}
+.inputs{
+    text-align: center !important;
+    padding-bottom: 10px !important;
+    align-content: center;
+    border-color: #ff0000;
+    font-size: 20px;
+}
+.share{
+    color: #39bfa3;
+    font-size: 50px !important;
+    align-content: center;
+}
+.boton{
+    text-align: center !important;
+    align-content: center;
+    padding-bottom: 10px !important;
+    border-color: #ff0000;
+    font-size: 20px;
+}
+.imagenIconos img{
+    height: 40px;
+    width: 50px;
+    padding-right: 10px;
+}
