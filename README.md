@@ -1,2 +1,2 @@
 # Hackathon-semanai
-A simple version of Playlist with Friends
+-Playlist with Friends es una aplicacion web que te permite generar una playlist colaborativa entre tus amigos, la cual tenga canciones que a todos les agraden, la aplicacion realiza un analisis de los generos, artistas y canciones más escuchadas de cada uno de los usuarios que ingresen en la playlist para de esta forma determinar cuales son las canciones más indicadas para la reunion. 

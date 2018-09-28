@@ -14,13 +14,15 @@ import { JoinComponent } from './join/join.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { ShowCodeComponent } from './show-code/show-code.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CreateComponent,
     GetComponent,
-    JoinComponent
+    JoinComponent,
+    ShowCodeComponent
   ],
   imports: [
     BrowserModule,
