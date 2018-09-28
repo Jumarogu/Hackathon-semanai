@@ -7,7 +7,7 @@
 .inputs{
     text-align: center;
     margin-top: 20px;
-    border-color: #1A90FE;
+    border-color: #001529;
 }
 .share{
     color: #39bfa3;
@@ -16,6 +16,9 @@
 }
 .boton{
     text-align: center;
+    font-size: 17px;
+    text-align: center !important;
+
 }
 .imagenIconos img{
     height: 40px;
@@ -31,6 +34,6 @@
 
 .code{
     text-align: center;
-    border-color: #1A90FE;
+    border-color: #001529;
 }
 
