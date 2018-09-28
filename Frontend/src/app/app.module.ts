@@ -15,6 +15,7 @@ import { AppRoutingModule } from './/app-routing.module';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { ShowCodeComponent } from './show-code/show-code.component';
+import { ErrorComponent } from './error/error.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ShowCodeComponent } from './show-code/show-code.component';
     CreateComponent,
     GetComponent,
     JoinComponent,
-    ShowCodeComponent
+    ShowCodeComponent,
+    ErrorComponent
   ],
   imports: [
     BrowserModule,

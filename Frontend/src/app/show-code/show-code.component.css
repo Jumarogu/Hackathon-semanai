@@ -26,3 +26,8 @@
     width: 50px;
     padding-right: 10px;
 }
+.pcode {
+    font-size: 60px;
+    color: #39bfa3;
+    text-align: center;
+}

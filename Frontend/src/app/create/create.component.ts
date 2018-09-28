@@ -13,7 +13,8 @@ export class CreateComponent implements OnInit {
   private client_id = 'be2a413e2bbd402db45432d7ccdf0199';
   private scope = 'user-top-read';
 
-  constructor() {
+  constructor(private dataService: DataService) {
+    
    }
 
   ngOnInit() {
