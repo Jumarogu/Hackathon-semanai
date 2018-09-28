@@ -1,40 +1,40 @@
 .join{
     font-size: 90px;
     color: #39bfa3;
+    text-align: center;
+    background: #fff; 
 }
 .inputs{
-    text-align: center !important;
-    padding-bottom: 10px !important;
-    align-content: center;
-    border-color: #ff0000;
-    font-size: 20px;
-    font-family: Arial !important;
+    background:#fff; 
+    text-align: center;
+    border-color: #e8a50c;
+    margin-top: 20px;
 }
 .share{
     color: #39bfa3;
-    font-size: 50px !important;
+    font-size: 40px !important;
     align-content: center;
 }
 .boton{
-    text-align: center !important;
-    align-content: center;
-    padding-bottom: 10px !important;
-    border-color: #ff0000;
-    font-size: 20px;
-    font-family: Arial !important;
+    background:#fff; 
+    text-align: center;
+    border-color: #e8a50c;
 }
 .imagenIconos img{
     height: 40px;
     width: 50px;
     padding-right: 10px;
 }
-.texto{
-    text-align: center !important;
+
+.imagenIconos{
     align-content: center !important;
-    padding-top: 0px !important;
-    padding-bottom: 25px !important;
-    border-color: #ff0000;
-    font-size: 20px;
-    font-family: Arial !important;
-    margin-top: 50px;
+    text-align: center;
+    min-height: 100px;
 }
+
+.code{
+    background:#fff; 
+    text-align: center;
+    border-color: #e8a50c;
+}
+
