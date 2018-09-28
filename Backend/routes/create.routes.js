@@ -29,7 +29,7 @@ exports.createPlaylist = (req, res) => {
                 playlist_info.playlistCode = user_info.playlistCode;
                 playlist_info.user_id = user_info.id;
                 playlist_info.user_name = user_info.display_name;
-                playlist_info.users = [user_info]
+                playlist_info.users = [user_info];
                 
                 MongoClient.connect(uri, function(err, client) {    
                     const playlistCollection = client.db("PWF").collection("playlist");
@@ -48,7 +48,7 @@ exports.createPlaylist = (req, res) => {
 
                 MongoClient.connect(uri, function(err, client) {
                     const userCollection = client.db("PWF").collection("users");
-                    let topTracks = data.body.items
+                    let topTracks = data.body.items;
 
                     user_info.topTracks = topTracks;
 

@@ -20,4 +20,12 @@ export class DataService {
     return this.http.post( this.apiUrl + '/create', body);
   }
 
+  joinPlaylist( access_token: string, playlistCode: string): Observable<any> {
+    const body = { 
+      access_token: access_token,
+      playlistCode: playlistCode
+    }
+    return this.http.post( this.apiUrl + '/join', body);
+  }
+
 }
