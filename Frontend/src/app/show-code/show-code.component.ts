@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import {DataService } from '../services/data.service'
 
 @Component({
   selector: 'app-show-code',
@@ -7,7 +9,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ShowCodeComponent implements OnInit {
 
-  constructor() { }
+
+  private access_token;
+  private client_id = 'be2a413e2bbd402db45432d7ccdf0199';
+  private scope = 'user-top-read';
+
+  constructor(route: ActivatedRoute, private dataService: DataService) { 
+    let fragment = route.snapshot.fragment;
+    
+    if(fragment != null) {
+
+      let response = fragment.split('&');
+      response = response[0].split('=');
+      if(response[0] === 'access_token'){
+        this.access_token = response[1];
+        console.log(this.access_token);
+        this.dataService.createPlaylist(this.access_token).subscribe(response => {
+          console.log(response);
+        });
+      }
+    }
+  }
 
   ngOnInit() {
   }

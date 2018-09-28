@@ -16,7 +16,7 @@ app.use(bodyParser.json());
 
 // CreatePlaylist actions
 
-router.post('/api/create', create_routes.sayHi);
+router.post('/api/create', create_routes.createPlaylist);
 // create playlist POST 
 // add user to playlist
 // save user on db

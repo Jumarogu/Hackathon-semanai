@@ -13,21 +13,7 @@ export class CreateComponent implements OnInit {
   private client_id = 'be2a413e2bbd402db45432d7ccdf0199';
   private scope = 'user-top-read';
 
-  constructor(route: ActivatedRoute, private dataService: DataService) {
-    let fragment = route.snapshot.fragment;
-    
-    if(fragment != null) {
-
-      let response = fragment.split('&');
-      response = response[0].split('=');
-      if(response[0] === 'access_token'){
-        this.access_token = response[1];
-        console.log(this.access_token);
-        this.dataService.createPlaylist(this.access_token).subscribe(response => {
-          console.log(response);
-        });
-      }
-    }
+  constructor() {
    }
 
   ngOnInit() {
@@ -39,7 +25,7 @@ export class CreateComponent implements OnInit {
     
     var params = {
       client_id: this.client_id,
-      redirect_uri: 'http://localhost:4200/create',
+      redirect_uri: 'http://localhost:4200/show-code',
       scope: this.scope || '',
       response_type: 'token'
     };
