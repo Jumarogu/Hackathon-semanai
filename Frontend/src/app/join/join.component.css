@@ -26,3 +26,13 @@
     width: 50px;
     padding-right: 10px;
 }
+@media only screen and (max-width: 950px) {
+    .join{
+        font-size: 75px;
+    }
+}
+@media only screen and (max-width: 650px) {
+    .join{
+        font-size: 55px;
+    }
+}
