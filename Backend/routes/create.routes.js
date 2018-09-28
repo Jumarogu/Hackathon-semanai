@@ -2,7 +2,6 @@ var SpotifyWebApi = require('spotify-web-api-node');
 var MongoClient = require('mongodb').MongoClient;
 var assert = require('assert');
 var uri = "mongodb+srv://jumarogu:rooster@cluster0-vxv1v.mongodb.net/PWF?retryWrites=true";
-var http = require('http');
 
 var spotifyApi = new SpotifyWebApi({
     clientId: 'be2a413e2bbd402db45432d7ccdf0199',
@@ -17,6 +16,7 @@ exports.createPlaylist = (req, res) => {
         let access_token = req.body.access_token;
         spotifyApi.setAccessToken(access_token);
         var user_info = {};
+        var playlist_info = {};
 
         spotifyApi.getMe()
             .then(function(data) {
@@ -25,22 +25,19 @@ exports.createPlaylist = (req, res) => {
                 user_info.id = data.body.id;
                 user_info.display_name = data.body.display_name;
                 user_info.playlistCode = generateRandomString(8);
+
+                playlist_info.playlistCode = user_info.playlistCode;
+                playlist_info.user_id = user_info.id;
+                playlist_info.user_name = user_info.display_name;
+                playlist_info.users = [user_info]
                 
                 MongoClient.connect(uri, function(err, client) {    
                     const playlistCollection = client.db("PWF").collection("playlist");
 
-                    
-                    let playlist =  {
-                        playlistCode: user_info.playlistCode,
-                        user_id: user_info.id,
-                        user_name: user_info.display_name,
-                        users: [user_info]
-                    }
-
-                    playlistCollection.insertOne(playlist, (err, result) => {
+                    playlistCollection.insertOne(playlist_info, (err, result) => {
                         assert.equal(err, null);
                         
-                        console.log("Inserted the object : " + result);
+                        console.log("Inserted the playlist : " + playlist_info.playlistCode);
                     });
                     client.close();
                 })
@@ -62,7 +59,7 @@ exports.createPlaylist = (req, res) => {
                     });
                     client.close();
                 })
-                res.status(201).json({'message' : access_token});
+                res.status(201).json(playlist_info);
             })
             .catch((error)=> {
                 console.error(error);
