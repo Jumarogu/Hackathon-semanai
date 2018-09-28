@@ -4,33 +4,26 @@ var cors = require('cors');
 var SpotifyWebApi = require('spotify-web-api-node');
 
 var create_routes = require('./routes/create.routes');
+var join_routes = require('./routes/join.routes');
+var get_routes = require('./routes/get.route');
 
 var app = express();
 var port = process.env.PORT || 8080;
 var router = express.Router();
 
 app.use(cors());
-pp.options('*', cors())
+app.options('*', cors())
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 // CreatePlaylist actions
-
-router.get('/api/hi', create_routes.sayHi);
-// create playlist POST 
-// add user to playlist
-// save user on db
-// get users preferences
-// top songs
-// top artists
-// last saved songs -> genres from artist
-// last albums saved -> genres from artist
-// preferences.save()
-//
+router.post('/api/create', create_routes.createPlaylist);
 
 // JoinPlaylist actions
+router.post('/api/join', join_routes.joinPlaylist);
 
 // GetPlaylist actions
+router.post('/api/get', get_routes.savePlaylist);
 
 app.use('/', router);
 

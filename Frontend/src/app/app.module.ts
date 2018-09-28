@@ -14,13 +14,22 @@ import { JoinComponent } from './join/join.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { ShowCodeComponent } from './show-code/show-code.component';
+import { ErrorComponent } from './error/error.component';
+import { JoinSuccessComponent } from './join-success/join-success.component';
+import { CookieService } from 'ngx-cookie-service';
+import { SaveSuccessComponent } from './save-success/save-success.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CreateComponent,
     GetComponent,
-    JoinComponent
+    JoinComponent,
+    ShowCodeComponent,
+    ErrorComponent,
+    JoinSuccessComponent,
+    SaveSuccessComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +40,7 @@ import { environment } from '../environments/environment';
     AppRoutingModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
-  providers: [{provide : NZ_I18N, useValue: en_US}],
+  providers: [{provide : NZ_I18N, useValue: en_US}, CookieService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

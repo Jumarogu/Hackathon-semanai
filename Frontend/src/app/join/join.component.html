@@ -1,16 +1,24 @@
-<div class="join" style="background:#fff; padding: 24px; min-height: 280px; text-align: center;">
-    Join a playlist
-    <div>
+<div nz-row class="join" style="background:#fff; padding: 24px; min-height: 280px; text-align: center;">
+    <div nz-col nzXs='24' nzSm='24' nzMd='24' nzLg='24' nzXl='24'>
+        Join a playlist
+    </div>
+<div>
         <input class="inputs"
-            style="width: 300px; height: 50px; margin-top: 10px; margin-left: 30px;"
-            nz-input placeholder="Enter your code" nzSize="large">
-    </div>
+            style="width: 300px; height: 50px; margin-top: 10px;"
+            nz-input placeholder="Enter your code" 
+            nzSize="large"
+            [(ngModel)]="code">
+</div>
     <div>
-        <button 
-        style="width: 300px; height: 50px; margin-left: 30px;"
-        nz-button [nzSize]="size" nzType="default">Join Playlist</button>
+        <button class="boton"
+        style="width: 300px; height: 50px;"
+        nz-button (click)='redirect()' [nzSize]="large" nzType="primary">Join Playlist</button>
     </div>
-    <div class="share" style="padding: 24px; text-align: center; margin-left: 30px;">
+    <div class="share" style="padding: 24px; text-align: center;">
             Share
     <div>
+    <div class="imagenIconos">
+        <a><img src="assets/icons/fb.png"></a>
+        <a><img src="assets/icons/twitterIcon.png"></a>
+    </div>
 </div>
