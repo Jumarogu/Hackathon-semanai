@@ -11,12 +11,10 @@ export class ShowCodeComponent implements OnInit {
 
   private access_token;
   private playlist_info;
-  private client_id = 'be2a413e2bbd402db45432d7ccdf0199';
-  private scope = 'user-top-read';
 
   constructor(route: ActivatedRoute, private dataService: DataService) { 
-    let fragment = route.snapshot.fragment;
     
+    let fragment = route.snapshot.fragment;
     if(fragment != null) {
 
       let response = fragment.split('&');
