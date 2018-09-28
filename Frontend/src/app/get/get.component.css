@@ -8,6 +8,7 @@
     align-content: center;
     border-color: #ff0000;
     font-size: 20px;
+    font-family: Arial !important;
 }
 .share{
     color: #39bfa3;
@@ -20,9 +21,20 @@
     padding-bottom: 10px !important;
     border-color: #ff0000;
     font-size: 20px;
+    font-family: Arial !important;
 }
 .imagenIconos img{
     height: 40px;
     width: 50px;
     padding-right: 10px;
+}
+.texto{
+    text-align: center !important;
+    align-content: center !important;
+    padding-top: 0px !important;
+    padding-bottom: 25px !important;
+    border-color: #ff0000;
+    font-size: 20px;
+    font-family: Arial !important;
+    margin-top: 50px;
 }
