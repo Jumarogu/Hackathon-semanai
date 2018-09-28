@@ -10,7 +10,7 @@ import {DataService } from '../services/data.service'
 export class ShowCodeComponent implements OnInit {
 
   private access_token;
-  private playlist_info;
+  public playlist_info;
 
   constructor(route: ActivatedRoute, private dataService: DataService) { 
     

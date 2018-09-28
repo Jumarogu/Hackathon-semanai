@@ -10,8 +10,8 @@ import { DataService } from '../services/data.service';
 })
 export class JoinSuccessComponent implements OnInit {
 
-  private playlistCode;
-  private access_token;
+  public playlistCode;
+  public access_token;
   private user_info;
   constructor(route: ActivatedRoute, private cookieService: CookieService, private dataService: DataService){
     

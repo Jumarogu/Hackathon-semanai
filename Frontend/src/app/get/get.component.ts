@@ -9,7 +9,8 @@ import { CookieService } from 'ngx-cookie-service';
 })
 export class GetComponent implements OnInit {
 
-  private playlist_info = {
+  large = 'large';
+  public playlist_info = {
     playlistCode: '',
     name : ''
   }
@@ -33,7 +34,7 @@ export class GetComponent implements OnInit {
     this.cookieService.set('playlistName', this.playlist_info.name);
     var params = {
       client_id: this.client_id,
-      redirect_uri: 'http://localhost:4200/save-succes',
+      redirect_uri: 'http://localhost:4200/save-success',
       scope: this.scope || '',
       response_type: 'token'
     };

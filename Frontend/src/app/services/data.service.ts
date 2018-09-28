@@ -28,4 +28,13 @@ export class DataService {
     return this.http.post( this.apiUrl + '/join', body);
   }
 
+  savePlaylist( access_token: string, playlistCode: string, playlistName: string ): Observable<any> {
+    const body = {
+      access_token: access_token,
+      playlistCode: playlistCode,
+      playlistName: playlistName
+    }
+    return this.http.post( this.apiUrl + '/get', body);
+  } 
+
 }

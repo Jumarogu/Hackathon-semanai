@@ -8,10 +8,11 @@ import { CookieService } from 'ngx-cookie-service';
 })
 export class JoinComponent implements OnInit {
 
-  private code = '';
+  public code = '';
   private client_id = 'be2a413e2bbd402db45432d7ccdf0199';
   private scope = 'user-top-read';
-
+  large = 'large';
+  
   constructor(private cookieService: CookieService) { }
 
   ngOnInit() {

@@ -21,7 +21,6 @@ exports.createPlaylist = (req, res) => {
         spotifyApi.getMe()
             .then(function(data) {
 
-                console.log('Some information about the authenticated user', data.body);
                 user_info.id = data.body.id;
                 user_info.display_name = data.body.display_name;
                 user_info.playlistCode = generateRandomString(8);
@@ -67,10 +66,6 @@ exports.createPlaylist = (req, res) => {
     } else {
         res.status(400).json({'message': 'bad request, no params recibed'});
     }
-}
-
-const callback = (result) => {
-    console.log('Llegue al callback perros');
 }
 
 var generateRandomString = (length) => {
