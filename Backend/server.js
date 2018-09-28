@@ -10,13 +10,13 @@ var port = process.env.PORT || 8080;
 var router = express.Router();
 
 app.use(cors());
-pp.options('*', cors())
+app.options('*', cors())
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 // CreatePlaylist actions
 
-router.get('/api/hi', create_routes.sayHi);
+router.post('/api/create', create_routes.sayHi);
 // create playlist POST 
 // add user to playlist
 // save user on db
