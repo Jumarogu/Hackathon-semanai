@@ -14,9 +14,15 @@
 }
 
 .code h3{
-    color: #ff0000;
+    color: #001529;
 }
 .share{
     color: #39bfa3;
     font-size: 50px !important;
+}
+
+.imagenIconos img{
+    height: 40px;
+    width: 50px;
+    padding-right: 10px;
 }

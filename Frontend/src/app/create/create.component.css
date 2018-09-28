@@ -20,6 +20,16 @@
 }
 
 .info h3{
-    color: #ff0000;
+    color: #001529;
     padding-bottom: 5%;
+}
+@media only screen and (max-width: 950px) {
+    .main{
+        font-size: 75px;
+    }
+}
+@media only screen and (max-width: 650px) {
+    .main{
+        font-size: 55px;
+    }
 }
