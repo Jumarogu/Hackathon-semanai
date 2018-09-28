@@ -5,10 +5,9 @@
     background: #fff; 
 }
 .inputs{
-    background:#fff; 
     text-align: center;
-    border-color: #e8a50c;
     margin-top: 20px;
+    border-color: #1A90FE;
 }
 .share{
     color: #39bfa3;
@@ -16,9 +15,7 @@
     align-content: center;
 }
 .boton{
-    background:#fff; 
     text-align: center;
-    border-color: #e8a50c;
 }
 .imagenIconos img{
     height: 40px;
@@ -33,8 +30,7 @@
 }
 
 .code{
-    background:#fff; 
     text-align: center;
-    border-color: #e8a50c;
+    border-color: #1A90FE;
 }
 

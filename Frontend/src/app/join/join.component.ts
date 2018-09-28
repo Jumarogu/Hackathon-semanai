@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class JoinComponent implements OnInit {
 
+  code = '';
+
   constructor() { }
 
   ngOnInit() {
